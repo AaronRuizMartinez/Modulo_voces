@@ -6,9 +6,9 @@
    - Tipo de mezcla: Intragénero femenina (2 donantes mujeres).
 
 2. Voz_Hibrida_02 (Masculina — f0 media: 103.6 Hz, duración muestra maestra: 13.87 s)
-   - Donante A (Voz_A_02.wav): Masculina (Alonso Contreras)    — f0 media: 109.7 Hz, duración: 27.90 s
+   - Donante A (Voz_A_02.wav): Masculina (Alonso Contreras)    — f0 media: 109.7 Hz, duración efectiva utilizada en mezcla híbrida: ~8.0 s (extraídos de un archivo bruto de 27.90 s)
    - Donante B (Voz_B_02.wav): Masculina (José Rodrigo Orlich) — f0 media: 108.9 Hz, duración: 7.51 s
-   - Tipo de mezcla: Intragénero masculina (2 donantes hombres).
+   - Tipo de mezcla: Intragénero masculina (2 donantes hombres, segmentos balanceados de ~7.5–8.0 s por donante).
 
 3. Voz_Hibrida_03 (Femenina — f0 media: 186.2 Hz, duración muestra maestra: 14.63 s)
    - Donante A (Voz_A_03.wav): Femenina (Analucía)      — f0 media: 236.2 Hz, duración: 6.03 s
