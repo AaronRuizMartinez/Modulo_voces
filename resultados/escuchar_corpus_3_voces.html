@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparador Auditivo — 3 Voces Híbridas Sintéticas (45 Frases CAA)</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --border: #334155;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 24px;
+            line-height: 1.5;
+        }
+        h1, h2, h3 { margin-top: 0; }
+        .header {
+            max-width: 1440px;
+            margin: 0 auto 24px auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+        }
+        .cards-grid {
+            max-width: 1440px;
+            margin: 0 auto 24px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 16px;
+        }
+        .voice-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+        }
+        .voice-card h3 { color: var(--accent); margin-bottom: 6px; }
+        .voice-card .meta { font-size: 0.88rem; color: var(--muted); margin-bottom: 12px; }
+        .audio-block { margin-bottom: 10px; }
+        .audio-block span { display: block; font-size: 0.82rem; color: var(--muted); margin-bottom: 4px; }
+        audio { width: 100%; height: 36px; }
+        .controls-bar {
+            max-width: 1440px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 18px;
+        }
+        .search-input {
+            flex: 1;
+            min-width: 260px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #0b1120;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .filter-btn {
+            background: #0b1120;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 7px 13px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent);
+            color: #0f172a;
+            font-weight: 600;
+        }
+        .table-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            vertical-align: middle;
+        }
+        th {
+            background: #0b1120;
+            color: var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .idx-cell { font-weight: 700; color: var(--muted); width: 55px; }
+        .cat-cell { width: 155px; }
+        .text-cell { min-width: 280px; font-size: 0.96rem; }
+        .audio-cell { min-width: 250px; }
+        .file-link { font-size: 0.76rem; margin-top: 3px; }
+        .file-link a { color: var(--muted); text-decoration: none; }
+        .file-link a:hover { color: var(--accent); text-decoration: underline; }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.76rem;
+            font-weight: 600;
+        }
+        .badge-CAA_declarativa { background: #065f46; color: #a7f3d0; }
+        .badge-Pregunta_frecuente { background: #1e40af; color: #bfdbfe; }
+        .badge-Expresion_emocional { background: #9d174d; color: #fbcfe8; }
+        .badge-Oracion_larga { background: #78350f; color: #fde68a; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎧 Comparador Auditivo — 3 Voces Híbridas Sintéticas (45 Frases CAA)</h1>
+        <p style="color: var(--muted); margin: 4px 0 0 0;">
+            Reproduce y compara lado a lado cada una de las 45 frases sintetizadas a 22050 Hz Mono para
+            <strong>Voz_Hibrida_01, Voz_Hibrida_02, Voz_Hibrida_03</strong>, así como sus muestras maestras y pares de donantes originales.
+        </p>
+    </div>
+
+    <div class="cards-grid">
+        
+            <div class="voice-card">
+                <h3>🎙 Voz_Hibrida_01</h3>
+                <p class="meta">RTF: <strong>1.0175</strong> | Duración total: <strong>187.9 s</strong></p>
+                <div class="audio-block">
+                    <span>Muestra Maestra (Voz_Hibrida_01.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/voces_hibridas/Voz_Hibrida_01.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante A (Voz_A_01.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_A_01.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante B (Voz_B_01.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_B_01.wav"></audio>
+                </div>
+            </div>
+            
+            <div class="voice-card">
+                <h3>🎙 Voz_Hibrida_02</h3>
+                <p class="meta">RTF: <strong>1.2809</strong> | Duración total: <strong>194.3 s</strong></p>
+                <div class="audio-block">
+                    <span>Muestra Maestra (Voz_Hibrida_02.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/voces_hibridas/Voz_Hibrida_02.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante A (Voz_A_02.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_A_02.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante B (Voz_B_02.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_B_02.wav"></audio>
+                </div>
+            </div>
+            
+            <div class="voice-card">
+                <h3>🎙 Voz_Hibrida_03</h3>
+                <p class="meta">RTF: <strong>1.0730</strong> | Duración total: <strong>213.1 s</strong></p>
+                <div class="audio-block">
+                    <span>Muestra Maestra (Voz_Hibrida_03.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/voces_hibridas/Voz_Hibrida_03.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante A (Voz_A_03.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_A_03.wav"></audio>
+                </div>
+                <div class="audio-block">
+                    <span>Donante B (Voz_B_03.wav):</span>
+                    <audio controls preload="none" src="../datos_entrada/donantes/Voz_B_03.wav"></audio>
+                </div>
+            </div>
+            
+    </div>
+
+    <div class="controls-bar">
+        <input type="text" id="searchInput" class="search-input" placeholder="Buscar frase por palabra clave..." oninput="filtrarTabla()" />
+        <div>
+            <button class="filter-btn active" onclick="seleccionarCategoria('TODAS', this)">Todas (45)</button>
+            <button class="filter-btn" onclick="seleccionarCategoria('CAA_declarativa', this)">CAA Declarativas</button>
+            <button class="filter-btn" onclick="seleccionarCategoria('Pregunta_frecuente', this)">Preguntas</button>
+            <button class="filter-btn" onclick="seleccionarCategoria('Expresion_emocional', this)">Emocionales</button>
+            <button class="filter-btn" onclick="seleccionarCategoria('Oracion_larga', this)">Oraciones Largas</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Categoría</th>
+                    <th>Frase en Español</th>
+                    <th>Voz_Hibrida_01</th><th>Voz_Hibrida_02</th><th>Voz_Hibrida_03</th>
+                </tr>
+            </thead>
+            <tbody id="corpusTableBody">
+                
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#001</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Hola, buenos días a todos.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_001.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_001.wav" download>Voz_Hibrida_01_frase_001.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_001.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_001.wav" download>Voz_Hibrida_02_frase_001.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_001.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_001.wav" download>Voz_Hibrida_03_frase_001.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#002</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Quiero tomar un vaso de agua fresca.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_002.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_002.wav" download>Voz_Hibrida_01_frase_002.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_002.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_002.wav" download>Voz_Hibrida_02_frase_002.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_002.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_002.wav" download>Voz_Hibrida_03_frase_002.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#003</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Necesito ayuda para acomodar mi silla.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_003.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_003.wav" download>Voz_Hibrida_01_frase_003.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_003.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_003.wav" download>Voz_Hibrida_02_frase_003.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_003.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_003.wav" download>Voz_Hibrida_03_frase_003.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#004</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Me siento muy tranquilo en este lugar.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_004.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_004.wav" download>Voz_Hibrida_01_frase_004.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_004.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_004.wav" download>Voz_Hibrida_02_frase_004.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_004.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_004.wav" download>Voz_Hibrida_03_frase_004.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#005</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Por favor espera un momento antes de salir.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_005.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_005.wav" download>Voz_Hibrida_01_frase_005.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_005.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_005.wav" download>Voz_Hibrida_02_frase_005.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_005.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_005.wav" download>Voz_Hibrida_03_frase_005.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#006</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Tengo hambre y quisiera almorzar temprano.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_006.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_006.wav" download>Voz_Hibrida_01_frase_006.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_006.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_006.wav" download>Voz_Hibrida_02_frase_006.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_006.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_006.wav" download>Voz_Hibrida_03_frase_006.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#007</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Muchas gracias por escucharme con paciencia.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_007.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_007.wav" download>Voz_Hibrida_01_frase_007.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_007.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_007.wav" download>Voz_Hibrida_02_frase_007.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_007.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_007.wav" download>Voz_Hibrida_03_frase_007.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#008</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Hoy prefiero quedarme descansando en casa.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_008.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_008.wav" download>Voz_Hibrida_01_frase_008.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_008.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_008.wav" download>Voz_Hibrida_02_frase_008.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_008.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_008.wav" download>Voz_Hibrida_03_frase_008.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#009</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Me duele un poco la cabeza desde la mañana.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_009.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_009.wav" download>Voz_Hibrida_01_frase_009.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_009.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_009.wav" download>Voz_Hibrida_02_frase_009.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_009.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_009.wav" download>Voz_Hibrida_03_frase_009.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#010</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Quiero llamar a mi familia por teléfono.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_010.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_010.wav" download>Voz_Hibrida_01_frase_010.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_010.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_010.wav" download>Voz_Hibrida_02_frase_010.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_010.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_010.wav" download>Voz_Hibrida_03_frase_010.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#011</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Ya terminé todas mis actividades del día.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_011.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_011.wav" download>Voz_Hibrida_01_frase_011.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_011.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_011.wav" download>Voz_Hibrida_02_frase_011.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_011.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_011.wav" download>Voz_Hibrida_03_frase_011.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="CAA_declarativa">
+                <td class="idx-cell">#012</td>
+                <td class="cat-cell"><span class="badge badge-CAA_declarativa">CAA_declarativa</span></td>
+                <td class="text-cell">Por favor baja el volumen del televisor.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_012.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_012.wav" download>Voz_Hibrida_01_frase_012.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_012.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_012.wav" download>Voz_Hibrida_02_frase_012.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_012.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_012.wav" download>Voz_Hibrida_03_frase_012.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#013</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Cómo te encuentras el día de hoy?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_013.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_013.wav" download>Voz_Hibrida_01_frase_013.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_013.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_013.wav" download>Voz_Hibrida_02_frase_013.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_013.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_013.wav" download>Voz_Hibrida_03_frase_013.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#014</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿A qué hora vamos a salir para la consulta?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_014.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_014.wav" download>Voz_Hibrida_01_frase_014.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_014.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_014.wav" download>Voz_Hibrida_02_frase_014.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_014.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_014.wav" download>Voz_Hibrida_03_frase_014.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#015</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Puedes repetirme lo que acabas de decir?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_015.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_015.wav" download>Voz_Hibrida_01_frase_015.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_015.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_015.wav" download>Voz_Hibrida_02_frase_015.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_015.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_015.wav" download>Voz_Hibrida_03_frase_015.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#016</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Dónde dejaste las llaves de la puerta principal?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_016.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_016.wav" download>Voz_Hibrida_01_frase_016.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_016.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_016.wav" download>Voz_Hibrida_02_frase_016.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_016.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_016.wav" download>Voz_Hibrida_03_frase_016.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#017</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Qué tenemos preparado para cenar esta noche?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_017.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_017.wav" download>Voz_Hibrida_01_frase_017.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_017.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_017.wav" download>Voz_Hibrida_02_frase_017.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_017.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_017.wav" download>Voz_Hibrida_03_frase_017.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#018</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Me podrías acercar mi tableta de comunicación?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_018.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_018.wav" download>Voz_Hibrida_01_frase_018.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_018.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_018.wav" download>Voz_Hibrida_02_frase_018.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_018.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_018.wav" download>Voz_Hibrida_03_frase_018.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#019</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Cuándo regresan mis hermanos del colegio?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_019.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_019.wav" download>Voz_Hibrida_01_frase_019.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_019.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_019.wav" download>Voz_Hibrida_02_frase_019.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_019.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_019.wav" download>Voz_Hibrida_03_frase_019.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#020</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Hace frío afuera o llevo un abrigo ligero?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_020.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_020.wav" download>Voz_Hibrida_01_frase_020.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_020.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_020.wav" download>Voz_Hibrida_02_frase_020.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_020.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_020.wav" download>Voz_Hibrida_03_frase_020.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#021</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Quién viene a visitarnos este fin de semana?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_021.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_021.wav" download>Voz_Hibrida_01_frase_021.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_021.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_021.wav" download>Voz_Hibrida_02_frase_021.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_021.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_021.wav" download>Voz_Hibrida_03_frase_021.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#022</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Podemos escuchar un poco de música suave?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_022.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_022.wav" download>Voz_Hibrida_01_frase_022.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_022.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_022.wav" download>Voz_Hibrida_02_frase_022.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_022.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_022.wav" download>Voz_Hibrida_03_frase_022.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Pregunta_frecuente">
+                <td class="idx-cell">#023</td>
+                <td class="cat-cell"><span class="badge badge-Pregunta_frecuente">Pregunta_frecuente</span></td>
+                <td class="text-cell">¿Cuánto tiempo falta para llegar al hospital?</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_023.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_023.wav" download>Voz_Hibrida_01_frase_023.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_023.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_023.wav" download>Voz_Hibrida_02_frase_023.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_023.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_023.wav" download>Voz_Hibrida_03_frase_023.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#024</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Qué alegría volver a verte después de tanto tiempo!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_024.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_024.wav" download>Voz_Hibrida_01_frase_024.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_024.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_024.wav" download>Voz_Hibrida_02_frase_024.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_024.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_024.wav" download>Voz_Hibrida_03_frase_024.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#025</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Estoy muy orgulloso de todo lo que logramos juntos!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_025.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_025.wav" download>Voz_Hibrida_01_frase_025.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_025.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_025.wav" download>Voz_Hibrida_02_frase_025.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_025.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_025.wav" download>Voz_Hibrida_03_frase_025.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#026</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">Me da mucha ilusión participar en este proyecto.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_026.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_026.wav" download>Voz_Hibrida_01_frase_026.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_026.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_026.wav" download>Voz_Hibrida_02_frase_026.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_026.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_026.wav" download>Voz_Hibrida_03_frase_026.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#027</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Qué sorpresa tan bonita me prepararon hoy!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_027.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_027.wav" download>Voz_Hibrida_01_frase_027.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_027.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_027.wav" download>Voz_Hibrida_02_frase_027.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_027.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_027.wav" download>Voz_Hibrida_03_frase_027.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#028</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">A veces me siento cansado, pero sigo adelante con ánimo.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_028.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_028.wav" download>Voz_Hibrida_01_frase_028.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_028.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_028.wav" download>Voz_Hibrida_02_frase_028.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_028.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_028.wav" download>Voz_Hibrida_03_frase_028.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#029</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Te agradezco de todo corazón por tu apoyo constante!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_029.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_029.wav" download>Voz_Hibrida_01_frase_029.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_029.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_029.wav" download>Voz_Hibrida_02_frase_029.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_029.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_029.wav" download>Voz_Hibrida_03_frase_029.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#030</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">Me encanta cuando compartimos historias por la tarde.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_030.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_030.wav" download>Voz_Hibrida_01_frase_030.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_030.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_030.wav" download>Voz_Hibrida_02_frase_030.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_030.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_030.wav" download>Voz_Hibrida_03_frase_030.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#031</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Qué excelente noticia acabamos de recibir!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_031.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_031.wav" download>Voz_Hibrida_01_frase_031.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_031.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_031.wav" download>Voz_Hibrida_02_frase_031.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_031.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_031.wav" download>Voz_Hibrida_03_frase_031.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#032</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">Siento mucha paz cuando escucho el sonido de la lluvia.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_032.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_032.wav" download>Voz_Hibrida_01_frase_032.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_032.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_032.wav" download>Voz_Hibrida_02_frase_032.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_032.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_032.wav" download>Voz_Hibrida_03_frase_032.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#033</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">¡Felicidades por haber alcanzado tu meta con éxito!</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_033.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_033.wav" download>Voz_Hibrida_01_frase_033.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_033.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_033.wav" download>Voz_Hibrida_02_frase_033.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_033.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_033.wav" download>Voz_Hibrida_03_frase_033.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Expresion_emocional">
+                <td class="idx-cell">#034</td>
+                <td class="cat-cell"><span class="badge badge-Expresion_emocional">Expresion_emocional</span></td>
+                <td class="text-cell">Me preocupa llegar tarde, salgamos lo antes posible.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_034.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_034.wav" download>Voz_Hibrida_01_frase_034.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_034.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_034.wav" download>Voz_Hibrida_02_frase_034.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_034.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_034.wav" download>Voz_Hibrida_03_frase_034.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#035</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_035.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_035.wav" download>Voz_Hibrida_01_frase_035.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_035.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_035.wav" download>Voz_Hibrida_02_frase_035.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_035.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_035.wav" download>Voz_Hibrida_03_frase_035.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#036</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_036.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_036.wav" download>Voz_Hibrida_01_frase_036.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_036.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_036.wav" download>Voz_Hibrida_02_frase_036.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_036.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_036.wav" download>Voz_Hibrida_03_frase_036.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#037</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_037.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_037.wav" download>Voz_Hibrida_01_frase_037.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_037.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_037.wav" download>Voz_Hibrida_02_frase_037.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_037.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_037.wav" download>Voz_Hibrida_03_frase_037.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#038</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_038.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_038.wav" download>Voz_Hibrida_01_frase_038.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_038.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_038.wav" download>Voz_Hibrida_02_frase_038.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_038.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_038.wav" download>Voz_Hibrida_03_frase_038.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#039</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_039.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_039.wav" download>Voz_Hibrida_01_frase_039.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_039.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_039.wav" download>Voz_Hibrida_02_frase_039.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_039.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_039.wav" download>Voz_Hibrida_03_frase_039.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#040</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_040.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_040.wav" download>Voz_Hibrida_01_frase_040.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_040.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_040.wav" download>Voz_Hibrida_02_frase_040.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_040.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_040.wav" download>Voz_Hibrida_03_frase_040.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#041</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_041.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_041.wav" download>Voz_Hibrida_01_frase_041.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_041.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_041.wav" download>Voz_Hibrida_02_frase_041.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_041.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_041.wav" download>Voz_Hibrida_03_frase_041.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#042</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_042.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_042.wav" download>Voz_Hibrida_01_frase_042.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_042.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_042.wav" download>Voz_Hibrida_02_frase_042.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_042.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_042.wav" download>Voz_Hibrida_03_frase_042.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#043</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_043.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_043.wav" download>Voz_Hibrida_01_frase_043.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_043.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_043.wav" download>Voz_Hibrida_02_frase_043.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_043.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_043.wav" download>Voz_Hibrida_03_frase_043.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#044</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_044.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_044.wav" download>Voz_Hibrida_01_frase_044.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_044.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_044.wav" download>Voz_Hibrida_02_frase_044.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_044.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_044.wav" download>Voz_Hibrida_03_frase_044.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            <tr class="phrase-row" data-category="Oracion_larga">
+                <td class="idx-cell">#045</td>
+                <td class="cat-cell"><span class="badge badge-Oracion_larga">Oracion_larga</span></td>
+                <td class="text-cell">Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.</td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_045.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_01/wavs/Voz_Hibrida_01_frase_045.wav" download>Voz_Hibrida_01_frase_045.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_045.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_02/wavs/Voz_Hibrida_02_frase_045.wav" download>Voz_Hibrida_02_frase_045.wav</a></div>
+                </td>
+                
+                <td class="audio-cell">
+                    <audio controls preload="none" src="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_045.wav"></audio>
+                    <div class="file-link"><a href="corpus_evaluacion/Voz_Hibrida_03/wavs/Voz_Hibrida_03_frase_045.wav" download>Voz_Hibrida_03_frase_045.wav</a></div>
+                </td>
+                
+            </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let categoriaActiva = 'TODAS';
+        // Pausar otros audios automáticamente al reproducir uno nuevo
+        document.addEventListener('play', function(e) {
+            const audios = document.getElementsByTagName('audio');
+            for (let i = 0; i < audios.length; i++) {
+                if (audios[i] !== e.target) {
+                    audios[i].pause();
+                }
+            }
+        }, true);
+
+        function seleccionarCategoria(cat, btn) {
+            categoriaActiva = cat;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filtrarTabla();
+        }
+
+        function filtrarTabla() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            const filas = document.querySelectorAll('.phrase-row');
+            filas.forEach(fila => {
+                const cat = fila.getAttribute('data-category');
+                const txt = fila.querySelector('.text-cell').textContent.toLowerCase();
+                const coincideCat = (categoriaActiva === 'TODAS' || cat === categoriaActiva);
+                const coincideTxt = txt.includes(q);
+                fila.style.display = (coincideCat && coincideTxt) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>

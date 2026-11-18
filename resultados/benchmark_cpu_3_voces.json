@@ -1,0 +1,134 @@
+{
+  "execution_provider": "CPUExecutionProvider",
+  "repeticiones_por_frase": 5,
+  "frases_evaluadas": {
+    "corta_5_palabras": {
+      "texto": "Quiero tomar agua fresca ahora.",
+      "num_palabras": 5
+    },
+    "media_15_palabras": {
+      "texto": "Necesito ayuda para acomodar mi tableta de comunicación y conversar tranquilo con toda mi familia.",
+      "num_palabras": 15
+    },
+    "larga_30_palabras": {
+      "texto": "La comunicación aumentativa y alternativa mediante modelos ligeros permite expresar ideas propias con claridad natural durante todo el día sin requerir conexión externa ni tarjetas gráficas dedicadas en el dispositivo.",
+      "num_palabras": 30
+    }
+  },
+  "voces": {
+    "Voz_Hibrida_01": {
+      "resumen": {
+        "voz": "Voz_Hibrida_01",
+        "provider": "CPUExecutionProvider",
+        "latencia_5w_ms": 1.816,
+        "latencia_5w_std_ms": 0.8,
+        "latencia_15w_ms": 3.449,
+        "latencia_15w_std_ms": 0.783,
+        "latencia_30w_ms": 6.547,
+        "latencia_30w_std_ms": 1.291,
+        "rtf_medio": 0.000744,
+        "ram_rss_max_mb": 88.94,
+        "ram_tracemalloc_peak_mb": 2.536
+      },
+      "desglose_por_longitud": {
+        "corta_5_palabras": {
+          "num_palabras": 5,
+          "latencia_media_ms": 1.816,
+          "latencia_std_ms": 0.8,
+          "duracion_audio_s": 1.741,
+          "rtf_medio": 0.001043
+        },
+        "media_15_palabras": {
+          "num_palabras": 15,
+          "latencia_media_ms": 3.449,
+          "latencia_std_ms": 0.783,
+          "duracion_audio_s": 5.388,
+          "rtf_medio": 0.00064
+        },
+        "larga_30_palabras": {
+          "num_palabras": 30,
+          "latencia_media_ms": 6.547,
+          "latencia_std_ms": 1.291,
+          "duracion_audio_s": 11.918,
+          "rtf_medio": 0.000549
+        }
+      }
+    },
+    "Voz_Hibrida_02": {
+      "resumen": {
+        "voz": "Voz_Hibrida_02",
+        "provider": "CPUExecutionProvider",
+        "latencia_5w_ms": 3.211,
+        "latencia_5w_std_ms": 1.955,
+        "latencia_15w_ms": 3.09,
+        "latencia_15w_std_ms": 0.659,
+        "latencia_30w_ms": 5.565,
+        "latencia_30w_std_ms": 0.689,
+        "rtf_medio": 0.000961,
+        "ram_rss_max_mb": 95.36,
+        "ram_tracemalloc_peak_mb": 2.034
+      },
+      "desglose_por_longitud": {
+        "corta_5_palabras": {
+          "num_palabras": 5,
+          "latencia_media_ms": 3.211,
+          "latencia_std_ms": 1.955,
+          "duracion_audio_s": 1.741,
+          "rtf_medio": 0.001844
+        },
+        "media_15_palabras": {
+          "num_palabras": 15,
+          "latencia_media_ms": 3.09,
+          "latencia_std_ms": 0.659,
+          "duracion_audio_s": 5.388,
+          "rtf_medio": 0.000574
+        },
+        "larga_30_palabras": {
+          "num_palabras": 30,
+          "latencia_media_ms": 5.565,
+          "latencia_std_ms": 0.689,
+          "duracion_audio_s": 11.918,
+          "rtf_medio": 0.000467
+        }
+      }
+    },
+    "Voz_Hibrida_03": {
+      "resumen": {
+        "voz": "Voz_Hibrida_03",
+        "provider": "CPUExecutionProvider",
+        "latencia_5w_ms": 2.297,
+        "latencia_5w_std_ms": 1.26,
+        "latencia_15w_ms": 2.967,
+        "latencia_15w_std_ms": 0.285,
+        "latencia_30w_ms": 7.325,
+        "latencia_30w_std_ms": 0.968,
+        "rtf_medio": 0.000828,
+        "ram_rss_max_mb": 101.89,
+        "ram_tracemalloc_peak_mb": 2.033
+      },
+      "desglose_por_longitud": {
+        "corta_5_palabras": {
+          "num_palabras": 5,
+          "latencia_media_ms": 2.297,
+          "latencia_std_ms": 1.26,
+          "duracion_audio_s": 1.741,
+          "rtf_medio": 0.001319
+        },
+        "media_15_palabras": {
+          "num_palabras": 15,
+          "latencia_media_ms": 2.967,
+          "latencia_std_ms": 0.285,
+          "duracion_audio_s": 5.388,
+          "rtf_medio": 0.000551
+        },
+        "larga_30_palabras": {
+          "num_palabras": 30,
+          "latencia_media_ms": 7.325,
+          "latencia_std_ms": 0.968,
+          "duracion_audio_s": 11.918,
+          "rtf_medio": 0.000615
+        }
+      }
+    }
+  }
+}

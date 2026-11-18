@@ -1,0 +1,1736 @@
+{
+  "configuracion": {
+    "voces_evaluadas": [
+      "Voz_Hibrida_01",
+      "Voz_Hibrida_02",
+      "Voz_Hibrida_03"
+    ],
+    "embedding_backend": "acoustic_torch_mfcc",
+    "whisper_model": "small",
+    "dry_run": true
+  },
+  "voces": {
+    "Voz_Hibrida_01": {
+      "donantes": {
+        "donante_a": "Voz_A_01",
+        "donante_b": "Voz_B_01"
+      },
+      "metrica_1_similitud_hablante": {
+        "hibrida_corpus_vs_donante_a": {
+          "media": 0.756,
+          "std": 0.0014
+        },
+        "hibrida_corpus_vs_donante_b": {
+          "media": 0.7642,
+          "std": 0.0019
+        },
+        "hibrida_maestra_vs_donante_a": 0.9834,
+        "hibrida_maestra_vs_donante_b": 0.9693,
+        "donante_a_vs_donante_b": 0.9876,
+        "hibrida_corpus_vs_maestra": {
+          "media": 0.729,
+          "std": 0.0009
+        }
+      },
+      "metrica_2_estabilidad_inter_frase": {
+        "num_frases": 45,
+        "num_pares_comparados": 990,
+        "similitud_media": 0.9997,
+        "similitud_std": 0.0003,
+        "similitud_min": 0.9985,
+        "similitud_max": 1.0,
+        "muestra_matriz_5x5": [
+          [
+            1.0,
+            0.9997000098228455,
+            0.9998000264167786,
+            0.9997000098228455,
+            0.9994000196456909
+          ],
+          [
+            0.9997000098228455,
+            1.0,
+            0.9998000264167786,
+            0.9998999834060669,
+            0.9998000264167786
+          ],
+          [
+            0.9998000264167786,
+            0.9998000264167786,
+            1.0,
+            0.9998000264167786,
+            0.9995999932289124
+          ],
+          [
+            0.9997000098228455,
+            0.9998999834060669,
+            0.9998000264167786,
+            1.0,
+            0.9998999834060669
+          ],
+          [
+            0.9994000196456909,
+            0.9998000264167786,
+            0.9995999932289124,
+            0.9998999834060669,
+            1.0
+          ]
+        ]
+      },
+      "metrica_3_inteligibilidad_asr": {
+        "modelo_asr": "faster-whisper (small)",
+        "wer_medio": 0.0084,
+        "wer_std": 0.0317,
+        "wer_medio_pct": 0.84,
+        "cer_medio": 0.0014,
+        "cer_std": 0.0054,
+        "cer_medio_pct": 0.14
+      },
+      "detalle_45_frases": [
+        {
+          "id_frase": 1,
+          "archivo": "Voz_Hibrida_01_frase_001.wav",
+          "texto_original": "Hola, buenos días a todos.",
+          "transcripcion_asr": "Hola, buenos días a todos.",
+          "sim_vs_donante_a": 0.7586,
+          "sim_vs_donante_b": 0.7675,
+          "sim_vs_hibrida_maestra": 0.7288,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 2,
+          "archivo": "Voz_Hibrida_01_frase_002.wav",
+          "texto_original": "Quiero tomar un vaso de agua fresca.",
+          "transcripcion_asr": "Quiero tomar un vaso de agua fresca.",
+          "sim_vs_donante_a": 0.7571,
+          "sim_vs_donante_b": 0.7659,
+          "sim_vs_hibrida_maestra": 0.7292,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 3,
+          "archivo": "Voz_Hibrida_01_frase_003.wav",
+          "texto_original": "Necesito ayuda para acomodar mi silla.",
+          "transcripcion_asr": "Necesito ayuda para acomodar mi silla.",
+          "sim_vs_donante_a": 0.7572,
+          "sim_vs_donante_b": 0.7666,
+          "sim_vs_hibrida_maestra": 0.7282,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 4,
+          "archivo": "Voz_Hibrida_01_frase_004.wav",
+          "texto_original": "Me siento muy tranquilo en este lugar.",
+          "transcripcion_asr": "Me siento muy tranquilo en este lugar.",
+          "sim_vs_donante_a": 0.7574,
+          "sim_vs_donante_b": 0.7658,
+          "sim_vs_hibrida_maestra": 0.7293,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 5,
+          "archivo": "Voz_Hibrida_01_frase_005.wav",
+          "texto_original": "Por favor espera un momento antes de salir.",
+          "transcripcion_asr": "Por favor espera un momento antes de salir.",
+          "sim_vs_donante_a": 0.7562,
+          "sim_vs_donante_b": 0.7642,
+          "sim_vs_hibrida_maestra": 0.7295,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 6,
+          "archivo": "Voz_Hibrida_01_frase_006.wav",
+          "texto_original": "Tengo hambre y quisiera almorzar temprano.",
+          "transcripcion_asr": "Tengo hambre y quisiera almorzar temprano.",
+          "sim_vs_donante_a": 0.7568,
+          "sim_vs_donante_b": 0.7659,
+          "sim_vs_hibrida_maestra": 0.7275,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 7,
+          "archivo": "Voz_Hibrida_01_frase_007.wav",
+          "texto_original": "Muchas gracias por escucharme con paciencia.",
+          "transcripcion_asr": "Muchas gracias por escucharme con paciencia.",
+          "sim_vs_donante_a": 0.7559,
+          "sim_vs_donante_b": 0.7652,
+          "sim_vs_hibrida_maestra": 0.7266,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 8,
+          "archivo": "Voz_Hibrida_01_frase_008.wav",
+          "texto_original": "Hoy prefiero quedarme descansando en casa.",
+          "transcripcion_asr": "Hoy prefiero quedarme descansando en casa.",
+          "sim_vs_donante_a": 0.7584,
+          "sim_vs_donante_b": 0.7681,
+          "sim_vs_hibrida_maestra": 0.7292,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 9,
+          "archivo": "Voz_Hibrida_01_frase_009.wav",
+          "texto_original": "Me duele un poco la cabeza desde la mañana.",
+          "transcripcion_asr": "Me duele un poco la cabeza desde la mañana.",
+          "sim_vs_donante_a": 0.7561,
+          "sim_vs_donante_b": 0.764,
+          "sim_vs_hibrida_maestra": 0.7301,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 10,
+          "archivo": "Voz_Hibrida_01_frase_010.wav",
+          "texto_original": "Quiero llamar a mi familia por teléfono.",
+          "transcripcion_asr": "Quiero llamar a mi familia por teléfono.",
+          "sim_vs_donante_a": 0.757,
+          "sim_vs_donante_b": 0.7655,
+          "sim_vs_hibrida_maestra": 0.7289,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 11,
+          "archivo": "Voz_Hibrida_01_frase_011.wav",
+          "texto_original": "Ya terminé todas mis actividades del día.",
+          "transcripcion_asr": "Ya terminé todas mis actividades del día.",
+          "sim_vs_donante_a": 0.7576,
+          "sim_vs_donante_b": 0.766,
+          "sim_vs_hibrida_maestra": 0.7298,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 12,
+          "archivo": "Voz_Hibrida_01_frase_012.wav",
+          "texto_original": "Por favor baja el volumen del televisor.",
+          "transcripcion_asr": "Por favor baja el volumen del televisor.",
+          "sim_vs_donante_a": 0.7563,
+          "sim_vs_donante_b": 0.7651,
+          "sim_vs_hibrida_maestra": 0.7283,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 13,
+          "archivo": "Voz_Hibrida_01_frase_013.wav",
+          "texto_original": "¿Cómo te encuentras el día de hoy?",
+          "transcripcion_asr": "¿Cómo te encuentras el día de hoy?",
+          "sim_vs_donante_a": 0.7569,
+          "sim_vs_donante_b": 0.7654,
+          "sim_vs_hibrida_maestra": 0.7288,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 14,
+          "archivo": "Voz_Hibrida_01_frase_014.wav",
+          "texto_original": "¿A qué hora vamos a salir para la consulta?",
+          "transcripcion_asr": "¿A qué hora vamos a salir para la consulta?",
+          "sim_vs_donante_a": 0.7563,
+          "sim_vs_donante_b": 0.7642,
+          "sim_vs_hibrida_maestra": 0.7303,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 15,
+          "archivo": "Voz_Hibrida_01_frase_015.wav",
+          "texto_original": "¿Puedes repetirme lo que acabas de decir?",
+          "transcripcion_asr": "¿Puedes repetirm lo que acabas de decir?",
+          "sim_vs_donante_a": 0.757,
+          "sim_vs_donante_b": 0.7659,
+          "sim_vs_hibrida_maestra": 0.7292,
+          "wer": 0.1429,
+          "cer": 0.0256
+        },
+        {
+          "id_frase": 16,
+          "archivo": "Voz_Hibrida_01_frase_016.wav",
+          "texto_original": "¿Dónde dejaste las llaves de la puerta principal?",
+          "transcripcion_asr": "¿Dónde dejaste las llaves de la puerta principal?",
+          "sim_vs_donante_a": 0.7567,
+          "sim_vs_donante_b": 0.7648,
+          "sim_vs_hibrida_maestra": 0.7299,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 17,
+          "archivo": "Voz_Hibrida_01_frase_017.wav",
+          "texto_original": "¿Qué tenemos preparado para cenar esta noche?",
+          "transcripcion_asr": "¿Qué tenemos preparado para cenar esta noche?",
+          "sim_vs_donante_a": 0.7567,
+          "sim_vs_donante_b": 0.7653,
+          "sim_vs_hibrida_maestra": 0.7287,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 18,
+          "archivo": "Voz_Hibrida_01_frase_018.wav",
+          "texto_original": "¿Me podrías acercar mi tableta de comunicación?",
+          "transcripcion_asr": "¿Me podrías acercar mi tableta de comunicación?",
+          "sim_vs_donante_a": 0.7565,
+          "sim_vs_donante_b": 0.7647,
+          "sim_vs_hibrida_maestra": 0.7283,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 19,
+          "archivo": "Voz_Hibrida_01_frase_019.wav",
+          "texto_original": "¿Cuándo regresan mis hermanos del colegio?",
+          "transcripcion_asr": "¿Cuándo regresan mis hermanos del colegio?",
+          "sim_vs_donante_a": 0.7574,
+          "sim_vs_donante_b": 0.7663,
+          "sim_vs_hibrida_maestra": 0.7285,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 20,
+          "archivo": "Voz_Hibrida_01_frase_020.wav",
+          "texto_original": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "transcripcion_asr": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "sim_vs_donante_a": 0.7576,
+          "sim_vs_donante_b": 0.7655,
+          "sim_vs_hibrida_maestra": 0.7311,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 21,
+          "archivo": "Voz_Hibrida_01_frase_021.wav",
+          "texto_original": "¿Quién viene a visitarnos este fin de semana?",
+          "transcripcion_asr": "¿Quién viene a visitarnos este fin de semana?",
+          "sim_vs_donante_a": 0.7562,
+          "sim_vs_donante_b": 0.7643,
+          "sim_vs_hibrida_maestra": 0.7294,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 22,
+          "archivo": "Voz_Hibrida_01_frase_022.wav",
+          "texto_original": "¿Podemos escuchar un poco de música suave?",
+          "transcripcion_asr": "¿Podemos escuchar un poco de música suave?",
+          "sim_vs_donante_a": 0.7571,
+          "sim_vs_donante_b": 0.7654,
+          "sim_vs_hibrida_maestra": 0.7292,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 23,
+          "archivo": "Voz_Hibrida_01_frase_023.wav",
+          "texto_original": "¿Cuánto tiempo falta para llegar al hospital?",
+          "transcripcion_asr": "¿Cuánto tiempo falta para llegar al hospital?",
+          "sim_vs_donante_a": 0.7568,
+          "sim_vs_donante_b": 0.7652,
+          "sim_vs_hibrida_maestra": 0.7287,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 24,
+          "archivo": "Voz_Hibrida_01_frase_024.wav",
+          "texto_original": "¡Qué alegría volver a verte después de tanto tiempo!",
+          "transcripcion_asr": "¡Qué alegrí volver a verte después de tanto tiempo!",
+          "sim_vs_donante_a": 0.7554,
+          "sim_vs_donante_b": 0.7631,
+          "sim_vs_hibrida_maestra": 0.7289,
+          "wer": 0.1111,
+          "cer": 0.02
+        },
+        {
+          "id_frase": 25,
+          "archivo": "Voz_Hibrida_01_frase_025.wav",
+          "texto_original": "¡Estoy muy orgulloso de todo lo que logramos juntos!",
+          "transcripcion_asr": "¡Estoy muy orgulloso de todo lo que logramos juntos!",
+          "sim_vs_donante_a": 0.7559,
+          "sim_vs_donante_b": 0.7637,
+          "sim_vs_hibrida_maestra": 0.7297,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 26,
+          "archivo": "Voz_Hibrida_01_frase_026.wav",
+          "texto_original": "Me da mucha ilusión participar en este proyecto.",
+          "transcripcion_asr": "Me da mucha ilusión participar en este proyecto.",
+          "sim_vs_donante_a": 0.7565,
+          "sim_vs_donante_b": 0.7645,
+          "sim_vs_hibrida_maestra": 0.73,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 27,
+          "archivo": "Voz_Hibrida_01_frase_027.wav",
+          "texto_original": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "transcripcion_asr": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "sim_vs_donante_a": 0.7555,
+          "sim_vs_donante_b": 0.7639,
+          "sim_vs_hibrida_maestra": 0.7277,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 28,
+          "archivo": "Voz_Hibrida_01_frase_028.wav",
+          "texto_original": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "transcripcion_asr": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "sim_vs_donante_a": 0.7536,
+          "sim_vs_donante_b": 0.7616,
+          "sim_vs_hibrida_maestra": 0.7278,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 29,
+          "archivo": "Voz_Hibrida_01_frase_029.wav",
+          "texto_original": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "transcripcion_asr": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "sim_vs_donante_a": 0.7562,
+          "sim_vs_donante_b": 0.7643,
+          "sim_vs_hibrida_maestra": 0.7299,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 30,
+          "archivo": "Voz_Hibrida_01_frase_030.wav",
+          "texto_original": "Me encanta cuando compartimos historias por la tarde.",
+          "transcripcion_asr": "Me encant cuando compartimos historias por la tarde.",
+          "sim_vs_donante_a": 0.7568,
+          "sim_vs_donante_b": 0.7646,
+          "sim_vs_hibrida_maestra": 0.7303,
+          "wer": 0.125,
+          "cer": 0.0192
+        },
+        {
+          "id_frase": 31,
+          "archivo": "Voz_Hibrida_01_frase_031.wav",
+          "texto_original": "¡Qué excelente noticia acabamos de recibir!",
+          "transcripcion_asr": "¡Qué excelente noticia acabamos de recibir!",
+          "sim_vs_donante_a": 0.758,
+          "sim_vs_donante_b": 0.767,
+          "sim_vs_hibrida_maestra": 0.7286,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 32,
+          "archivo": "Voz_Hibrida_01_frase_032.wav",
+          "texto_original": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "transcripcion_asr": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "sim_vs_donante_a": 0.7538,
+          "sim_vs_donante_b": 0.7618,
+          "sim_vs_hibrida_maestra": 0.7276,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 33,
+          "archivo": "Voz_Hibrida_01_frase_033.wav",
+          "texto_original": "¡Felicidades por haber alcanzado tu meta con éxito!",
+          "transcripcion_asr": "¡Felicidades por haber alcanzado tu meta con éxito!",
+          "sim_vs_donante_a": 0.7563,
+          "sim_vs_donante_b": 0.7644,
+          "sim_vs_hibrida_maestra": 0.7295,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 34,
+          "archivo": "Voz_Hibrida_01_frase_034.wav",
+          "texto_original": "Me preocupa llegar tarde, salgamos lo antes posible.",
+          "transcripcion_asr": "Me preocupa llegar tarde, salgamos lo antes posible.",
+          "sim_vs_donante_a": 0.7572,
+          "sim_vs_donante_b": 0.7652,
+          "sim_vs_hibrida_maestra": 0.7303,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 35,
+          "archivo": "Voz_Hibrida_01_frase_035.wav",
+          "texto_original": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "transcripcion_asr": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "sim_vs_donante_a": 0.7548,
+          "sim_vs_donante_b": 0.7623,
+          "sim_vs_hibrida_maestra": 0.7295,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 36,
+          "archivo": "Voz_Hibrida_01_frase_036.wav",
+          "texto_original": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "transcripcion_asr": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "sim_vs_donante_a": 0.7537,
+          "sim_vs_donante_b": 0.7613,
+          "sim_vs_hibrida_maestra": 0.7284,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 37,
+          "archivo": "Voz_Hibrida_01_frase_037.wav",
+          "texto_original": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "transcripcion_asr": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "sim_vs_donante_a": 0.7546,
+          "sim_vs_donante_b": 0.7621,
+          "sim_vs_hibrida_maestra": 0.7297,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 38,
+          "archivo": "Voz_Hibrida_01_frase_038.wav",
+          "texto_original": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "transcripcion_asr": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "sim_vs_donante_a": 0.7537,
+          "sim_vs_donante_b": 0.7615,
+          "sim_vs_hibrida_maestra": 0.7286,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 39,
+          "archivo": "Voz_Hibrida_01_frase_039.wav",
+          "texto_original": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "transcripcion_asr": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "sim_vs_donante_a": 0.7537,
+          "sim_vs_donante_b": 0.7615,
+          "sim_vs_hibrida_maestra": 0.7287,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 40,
+          "archivo": "Voz_Hibrida_01_frase_040.wav",
+          "texto_original": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "transcripcion_asr": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "sim_vs_donante_a": 0.7543,
+          "sim_vs_donante_b": 0.7619,
+          "sim_vs_hibrida_maestra": 0.7292,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 41,
+          "archivo": "Voz_Hibrida_01_frase_041.wav",
+          "texto_original": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "transcripcion_asr": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "sim_vs_donante_a": 0.7543,
+          "sim_vs_donante_b": 0.7621,
+          "sim_vs_hibrida_maestra": 0.7293,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 42,
+          "archivo": "Voz_Hibrida_01_frase_042.wav",
+          "texto_original": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "transcripcion_asr": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "sim_vs_donante_a": 0.7531,
+          "sim_vs_donante_b": 0.7608,
+          "sim_vs_hibrida_maestra": 0.7283,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 43,
+          "archivo": "Voz_Hibrida_01_frase_043.wav",
+          "texto_original": "Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "transcripcion_asr": "Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "sim_vs_donante_a": 0.7543,
+          "sim_vs_donante_b": 0.762,
+          "sim_vs_hibrida_maestra": 0.7293,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 44,
+          "archivo": "Voz_Hibrida_01_frase_044.wav",
+          "texto_original": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "transcripcion_asr": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "sim_vs_donante_a": 0.7535,
+          "sim_vs_donante_b": 0.7613,
+          "sim_vs_hibrida_maestra": 0.7284,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 45,
+          "archivo": "Voz_Hibrida_01_frase_045.wav",
+          "texto_original": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "transcripcion_asr": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "sim_vs_donante_a": 0.7544,
+          "sim_vs_donante_b": 0.762,
+          "sim_vs_hibrida_maestra": 0.7293,
+          "wer": 0.0,
+          "cer": 0.0
+        }
+      ]
+    },
+    "Voz_Hibrida_02": {
+      "donantes": {
+        "donante_a": "Voz_A_02",
+        "donante_b": "Voz_B_02"
+      },
+      "metrica_1_similitud_hablante": {
+        "hibrida_corpus_vs_donante_a": {
+          "media": 0.8034,
+          "std": 0.0032
+        },
+        "hibrida_corpus_vs_donante_b": {
+          "media": 0.8198,
+          "std": 0.0018
+        },
+        "hibrida_maestra_vs_donante_a": 0.9645,
+        "hibrida_maestra_vs_donante_b": 0.9828,
+        "donante_a_vs_donante_b": 0.9858,
+        "hibrida_corpus_vs_maestra": {
+          "media": 0.8088,
+          "std": 0.0015
+        }
+      },
+      "metrica_2_estabilidad_inter_frase": {
+        "num_frases": 45,
+        "num_pares_comparados": 990,
+        "similitud_media": 0.9997,
+        "similitud_std": 0.0003,
+        "similitud_min": 0.9985,
+        "similitud_max": 1.0,
+        "muestra_matriz_5x5": [
+          [
+            1.0,
+            0.9998999834060669,
+            0.9998999834060669,
+            0.9998000264167786,
+            0.9998000264167786
+          ],
+          [
+            0.9998999834060669,
+            1.0,
+            0.9998999834060669,
+            0.9998999834060669,
+            0.9998999834060669
+          ],
+          [
+            0.9998999834060669,
+            0.9998999834060669,
+            1.0,
+            0.9998999834060669,
+            0.9998999834060669
+          ],
+          [
+            0.9998000264167786,
+            0.9998999834060669,
+            0.9998999834060669,
+            1.0,
+            0.9998999834060669
+          ],
+          [
+            0.9998000264167786,
+            0.9998999834060669,
+            0.9998999834060669,
+            0.9998999834060669,
+            1.0
+          ]
+        ]
+      },
+      "metrica_3_inteligibilidad_asr": {
+        "modelo_asr": "faster-whisper (small)",
+        "wer_medio": 0.0043,
+        "wer_std": 0.0207,
+        "wer_medio_pct": 0.43,
+        "cer_medio": 0.0006,
+        "cer_std": 0.0032,
+        "cer_medio_pct": 0.06
+      },
+      "detalle_45_frases": [
+        {
+          "id_frase": 1,
+          "archivo": "Voz_Hibrida_02_frase_001.wav",
+          "texto_original": "Hola, buenos días a todos.",
+          "transcripcion_asr": "Hola, buenos días a todos.",
+          "sim_vs_donante_a": 0.8081,
+          "sim_vs_donante_b": 0.8223,
+          "sim_vs_hibrida_maestra": 0.8109,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 2,
+          "archivo": "Voz_Hibrida_02_frase_002.wav",
+          "texto_original": "Quiero tomar un vaso de agua fresca.",
+          "transcripcion_asr": "Quiero tomar un vaso de agua fresca.",
+          "sim_vs_donante_a": 0.8057,
+          "sim_vs_donante_b": 0.8212,
+          "sim_vs_hibrida_maestra": 0.8099,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 3,
+          "archivo": "Voz_Hibrida_02_frase_003.wav",
+          "texto_original": "Necesito ayuda para acomodar mi silla.",
+          "transcripcion_asr": "Necesito ayuda para acomodar mi silla.",
+          "sim_vs_donante_a": 0.8071,
+          "sim_vs_donante_b": 0.822,
+          "sim_vs_hibrida_maestra": 0.8107,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 4,
+          "archivo": "Voz_Hibrida_02_frase_004.wav",
+          "texto_original": "Me siento muy tranquilo en este lugar.",
+          "transcripcion_asr": "Me siento muy tranquilo en este lugar.",
+          "sim_vs_donante_a": 0.8057,
+          "sim_vs_donante_b": 0.8209,
+          "sim_vs_hibrida_maestra": 0.81,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 5,
+          "archivo": "Voz_Hibrida_02_frase_005.wav",
+          "texto_original": "Por favor espera un momento antes de salir.",
+          "transcripcion_asr": "Por favor espera un momento antes de salir.",
+          "sim_vs_donante_a": 0.8036,
+          "sim_vs_donante_b": 0.8193,
+          "sim_vs_hibrida_maestra": 0.8085,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 6,
+          "archivo": "Voz_Hibrida_02_frase_006.wav",
+          "texto_original": "Tengo hambre y quisiera almorzar temprano.",
+          "transcripcion_asr": "Tengo hambre y quisiera almorzar temprano.",
+          "sim_vs_donante_a": 0.807,
+          "sim_vs_donante_b": 0.8224,
+          "sim_vs_hibrida_maestra": 0.8113,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 7,
+          "archivo": "Voz_Hibrida_02_frase_007.wav",
+          "texto_original": "Muchas gracias por escucharme con paciencia.",
+          "transcripcion_asr": "Muchas gracias por escucharme con paciencia.",
+          "sim_vs_donante_a": 0.8067,
+          "sim_vs_donante_b": 0.8219,
+          "sim_vs_hibrida_maestra": 0.8107,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 8,
+          "archivo": "Voz_Hibrida_02_frase_008.wav",
+          "texto_original": "Hoy prefiero quedarme descansando en casa.",
+          "transcripcion_asr": "Hoy prefiero quedarme descansando en casa.",
+          "sim_vs_donante_a": 0.8069,
+          "sim_vs_donante_b": 0.8218,
+          "sim_vs_hibrida_maestra": 0.8101,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 9,
+          "archivo": "Voz_Hibrida_02_frase_009.wav",
+          "texto_original": "Me duele un poco la cabeza desde la mañana.",
+          "transcripcion_asr": "Me duele un poco la cabeza desde la mañana.",
+          "sim_vs_donante_a": 0.8029,
+          "sim_vs_donante_b": 0.819,
+          "sim_vs_hibrida_maestra": 0.8082,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 10,
+          "archivo": "Voz_Hibrida_02_frase_010.wav",
+          "texto_original": "Quiero llamar a mi familia por teléfono.",
+          "transcripcion_asr": "Quiero llamar a mi familia por teléfono.",
+          "sim_vs_donante_a": 0.806,
+          "sim_vs_donante_b": 0.8214,
+          "sim_vs_hibrida_maestra": 0.8101,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 11,
+          "archivo": "Voz_Hibrida_02_frase_011.wav",
+          "texto_original": "Ya terminé todas mis actividades del día.",
+          "transcripcion_asr": "Ya terminé todas mis actividades del día.",
+          "sim_vs_donante_a": 0.8062,
+          "sim_vs_donante_b": 0.8216,
+          "sim_vs_hibrida_maestra": 0.8108,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 12,
+          "archivo": "Voz_Hibrida_02_frase_012.wav",
+          "texto_original": "Por favor baja el volumen del televisor.",
+          "transcripcion_asr": "Por favor baja el volumen del televisor.",
+          "sim_vs_donante_a": 0.8064,
+          "sim_vs_donante_b": 0.8218,
+          "sim_vs_hibrida_maestra": 0.8106,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 13,
+          "archivo": "Voz_Hibrida_02_frase_013.wav",
+          "texto_original": "¿Cómo te encuentras el día de hoy?",
+          "transcripcion_asr": "¿Cómo te encuentras el día de hoy?",
+          "sim_vs_donante_a": 0.8063,
+          "sim_vs_donante_b": 0.8218,
+          "sim_vs_hibrida_maestra": 0.8104,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 14,
+          "archivo": "Voz_Hibrida_02_frase_014.wav",
+          "texto_original": "¿A qué hora vamos a salir para la consulta?",
+          "transcripcion_asr": "¿A qué hora vamos a salir para la consulta?",
+          "sim_vs_donante_a": 0.8027,
+          "sim_vs_donante_b": 0.8187,
+          "sim_vs_hibrida_maestra": 0.8076,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 15,
+          "archivo": "Voz_Hibrida_02_frase_015.wav",
+          "texto_original": "¿Puedes repetirme lo que acabas de decir?",
+          "transcripcion_asr": "¿Puedes repetirme lo que acabas de decir?",
+          "sim_vs_donante_a": 0.8055,
+          "sim_vs_donante_b": 0.8209,
+          "sim_vs_hibrida_maestra": 0.8097,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 16,
+          "archivo": "Voz_Hibrida_02_frase_016.wav",
+          "texto_original": "¿Dónde dejaste las llaves de la puerta principal?",
+          "transcripcion_asr": "¿Dónde dejaste las llaves de la puerta principal?",
+          "sim_vs_donante_a": 0.8032,
+          "sim_vs_donante_b": 0.819,
+          "sim_vs_hibrida_maestra": 0.8079,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 17,
+          "archivo": "Voz_Hibrida_02_frase_017.wav",
+          "texto_original": "¿Qué tenemos preparado para cenar esta noche?",
+          "transcripcion_asr": "¿Qué tenemos preparado para cenar esta noche?",
+          "sim_vs_donante_a": 0.8062,
+          "sim_vs_donante_b": 0.8216,
+          "sim_vs_hibrida_maestra": 0.81,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 18,
+          "archivo": "Voz_Hibrida_02_frase_018.wav",
+          "texto_original": "¿Me podrías acercar mi tableta de comunicación?",
+          "transcripcion_asr": "¿Me podrías acercar mi tableta de comunicación?",
+          "sim_vs_donante_a": 0.8063,
+          "sim_vs_donante_b": 0.8215,
+          "sim_vs_hibrida_maestra": 0.8106,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 19,
+          "archivo": "Voz_Hibrida_02_frase_019.wav",
+          "texto_original": "¿Cuándo regresan mis hermanos del colegio?",
+          "transcripcion_asr": "¿Cuándo regresan mis hermanos del colegio?",
+          "sim_vs_donante_a": 0.8074,
+          "sim_vs_donante_b": 0.8224,
+          "sim_vs_hibrida_maestra": 0.8109,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 20,
+          "archivo": "Voz_Hibrida_02_frase_020.wav",
+          "texto_original": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "transcripcion_asr": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "sim_vs_donante_a": 0.8039,
+          "sim_vs_donante_b": 0.8195,
+          "sim_vs_hibrida_maestra": 0.8084,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 21,
+          "archivo": "Voz_Hibrida_02_frase_021.wav",
+          "texto_original": "¿Quién viene a visitarnos este fin de semana?",
+          "transcripcion_asr": "¿Quién viene a visitarnos este fin de semana?",
+          "sim_vs_donante_a": 0.8038,
+          "sim_vs_donante_b": 0.8193,
+          "sim_vs_hibrida_maestra": 0.8078,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 22,
+          "archivo": "Voz_Hibrida_02_frase_022.wav",
+          "texto_original": "¿Podemos escuchar un poco de música suave?",
+          "transcripcion_asr": "¿Podemos escuchar un poco de música suave?",
+          "sim_vs_donante_a": 0.8063,
+          "sim_vs_donante_b": 0.8218,
+          "sim_vs_hibrida_maestra": 0.811,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 23,
+          "archivo": "Voz_Hibrida_02_frase_023.wav",
+          "texto_original": "¿Cuánto tiempo falta para llegar al hospital?",
+          "transcripcion_asr": "¿Cuánto tiempo falta para llegar al hospital?",
+          "sim_vs_donante_a": 0.8052,
+          "sim_vs_donante_b": 0.8205,
+          "sim_vs_hibrida_maestra": 0.8093,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 24,
+          "archivo": "Voz_Hibrida_02_frase_024.wav",
+          "texto_original": "¡Qué alegría volver a verte después de tanto tiempo!",
+          "transcripcion_asr": "¡Qué alegría volver a verte después de tanto tiempo!",
+          "sim_vs_donante_a": 0.8019,
+          "sim_vs_donante_b": 0.8181,
+          "sim_vs_hibrida_maestra": 0.8072,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 25,
+          "archivo": "Voz_Hibrida_02_frase_025.wav",
+          "texto_original": "¡Estoy muy orgulloso de todo lo que logramos juntos!",
+          "transcripcion_asr": "¡Estoy muy orgulloso de todo lo que logramos juntos",
+          "sim_vs_donante_a": 0.8025,
+          "sim_vs_donante_b": 0.8187,
+          "sim_vs_hibrida_maestra": 0.8078,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 26,
+          "archivo": "Voz_Hibrida_02_frase_026.wav",
+          "texto_original": "Me da mucha ilusión participar en este proyecto.",
+          "transcripcion_asr": "Me da mucha ilusión participar en este proyecto.",
+          "sim_vs_donante_a": 0.8029,
+          "sim_vs_donante_b": 0.8186,
+          "sim_vs_hibrida_maestra": 0.8072,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 27,
+          "archivo": "Voz_Hibrida_02_frase_027.wav",
+          "texto_original": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "transcripcion_asr": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "sim_vs_donante_a": 0.8056,
+          "sim_vs_donante_b": 0.821,
+          "sim_vs_hibrida_maestra": 0.8098,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 28,
+          "archivo": "Voz_Hibrida_02_frase_028.wav",
+          "texto_original": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "transcripcion_asr": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "sim_vs_donante_a": 0.8023,
+          "sim_vs_donante_b": 0.8195,
+          "sim_vs_hibrida_maestra": 0.8088,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 29,
+          "archivo": "Voz_Hibrida_02_frase_029.wav",
+          "texto_original": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "transcripcion_asr": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "sim_vs_donante_a": 0.8025,
+          "sim_vs_donante_b": 0.8185,
+          "sim_vs_hibrida_maestra": 0.8075,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 30,
+          "archivo": "Voz_Hibrida_02_frase_030.wav",
+          "texto_original": "Me encanta cuando compartimos historias por la tarde.",
+          "transcripcion_asr": "Me encanta cuando compartimos historias por la tarde.",
+          "sim_vs_donante_a": 0.8042,
+          "sim_vs_donante_b": 0.8199,
+          "sim_vs_hibrida_maestra": 0.8087,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 31,
+          "archivo": "Voz_Hibrida_02_frase_031.wav",
+          "texto_original": "¡Qué excelente noticia acabamos de recibir!",
+          "transcripcion_asr": "¡Qué excelente noticia acabamos de recibir!",
+          "sim_vs_donante_a": 0.8055,
+          "sim_vs_donante_b": 0.8204,
+          "sim_vs_hibrida_maestra": 0.8094,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 32,
+          "archivo": "Voz_Hibrida_02_frase_032.wav",
+          "texto_original": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "transcripcion_asr": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "sim_vs_donante_a": 0.8024,
+          "sim_vs_donante_b": 0.8193,
+          "sim_vs_hibrida_maestra": 0.8083,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 33,
+          "archivo": "Voz_Hibrida_02_frase_033.wav",
+          "texto_original": "¡Felicidades por haber alcanzado tu meta con éxito!",
+          "transcripcion_asr": "¡Felicidades por haber alcanzad tu meta con éxito!",
+          "sim_vs_donante_a": 0.8031,
+          "sim_vs_donante_b": 0.819,
+          "sim_vs_hibrida_maestra": 0.8075,
+          "wer": 0.125,
+          "cer": 0.0204
+        },
+        {
+          "id_frase": 34,
+          "archivo": "Voz_Hibrida_02_frase_034.wav",
+          "texto_original": "Me preocupa llegar tarde, salgamos lo antes posible.",
+          "transcripcion_asr": "Me preocupa llegar tarde, salgamos lo antes posible.",
+          "sim_vs_donante_a": 0.8051,
+          "sim_vs_donante_b": 0.8206,
+          "sim_vs_hibrida_maestra": 0.8093,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 35,
+          "archivo": "Voz_Hibrida_02_frase_035.wav",
+          "texto_original": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "transcripcion_asr": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "sim_vs_donante_a": 0.8003,
+          "sim_vs_donante_b": 0.8187,
+          "sim_vs_hibrida_maestra": 0.808,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 36,
+          "archivo": "Voz_Hibrida_02_frase_036.wav",
+          "texto_original": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "transcripcion_asr": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "sim_vs_donante_a": 0.7991,
+          "sim_vs_donante_b": 0.818,
+          "sim_vs_hibrida_maestra": 0.8072,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 37,
+          "archivo": "Voz_Hibrida_02_frase_037.wav",
+          "texto_original": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "transcripcion_asr": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "sim_vs_donante_a": 0.7993,
+          "sim_vs_donante_b": 0.818,
+          "sim_vs_hibrida_maestra": 0.8073,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 38,
+          "archivo": "Voz_Hibrida_02_frase_038.wav",
+          "texto_original": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "transcripcion_asr": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "sim_vs_donante_a": 0.7981,
+          "sim_vs_donante_b": 0.8172,
+          "sim_vs_hibrida_maestra": 0.8069,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 39,
+          "archivo": "Voz_Hibrida_02_frase_039.wav",
+          "texto_original": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "transcripcion_asr": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "sim_vs_donante_a": 0.7986,
+          "sim_vs_donante_b": 0.8173,
+          "sim_vs_hibrida_maestra": 0.807,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 40,
+          "archivo": "Voz_Hibrida_02_frase_040.wav",
+          "texto_original": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "transcripcion_asr": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "sim_vs_donante_a": 0.7988,
+          "sim_vs_donante_b": 0.8175,
+          "sim_vs_hibrida_maestra": 0.8072,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 41,
+          "archivo": "Voz_Hibrida_02_frase_041.wav",
+          "texto_original": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "transcripcion_asr": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "sim_vs_donante_a": 0.7992,
+          "sim_vs_donante_b": 0.8179,
+          "sim_vs_hibrida_maestra": 0.8072,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 42,
+          "archivo": "Voz_Hibrida_02_frase_042.wav",
+          "texto_original": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "transcripcion_asr": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "sim_vs_donante_a": 0.7976,
+          "sim_vs_donante_b": 0.8168,
+          "sim_vs_hibrida_maestra": 0.8065,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 43,
+          "archivo": "Voz_Hibrida_02_frase_043.wav",
+          "texto_original": "Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "transcripcion_asr": "Durante la sesión de rehabilitación practicamo ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "sim_vs_donante_a": 0.7985,
+          "sim_vs_donante_b": 0.8176,
+          "sim_vs_hibrida_maestra": 0.8073,
+          "wer": 0.0667,
+          "cer": 0.0085
+        },
+        {
+          "id_frase": 44,
+          "archivo": "Voz_Hibrida_02_frase_044.wav",
+          "texto_original": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "transcripcion_asr": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "sim_vs_donante_a": 0.7959,
+          "sim_vs_donante_b": 0.8159,
+          "sim_vs_hibrida_maestra": 0.806,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 45,
+          "archivo": "Voz_Hibrida_02_frase_045.wav",
+          "texto_original": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "transcripcion_asr": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "sim_vs_donante_a": 0.7985,
+          "sim_vs_donante_b": 0.8176,
+          "sim_vs_hibrida_maestra": 0.8073,
+          "wer": 0.0,
+          "cer": 0.0
+        }
+      ]
+    },
+    "Voz_Hibrida_03": {
+      "donantes": {
+        "donante_a": "Voz_A_03",
+        "donante_b": "Voz_B_03"
+      },
+      "metrica_1_similitud_hablante": {
+        "hibrida_corpus_vs_donante_a": {
+          "media": 0.7568,
+          "std": 0.0029
+        },
+        "hibrida_corpus_vs_donante_b": {
+          "media": 0.7398,
+          "std": 0.0013
+        },
+        "hibrida_maestra_vs_donante_a": 0.9703,
+        "hibrida_maestra_vs_donante_b": 0.9931,
+        "donante_a_vs_donante_b": 0.983,
+        "hibrida_corpus_vs_maestra": {
+          "media": 0.7554,
+          "std": 0.001
+        }
+      },
+      "metrica_2_estabilidad_inter_frase": {
+        "num_frases": 45,
+        "num_pares_comparados": 990,
+        "similitud_media": 0.9995,
+        "similitud_std": 0.0005,
+        "similitud_min": 0.9974,
+        "similitud_max": 1.0,
+        "muestra_matriz_5x5": [
+          [
+            1.0,
+            0.9997000098228455,
+            0.9998000264167786,
+            0.9997000098228455,
+            0.9995999932289124
+          ],
+          [
+            0.9997000098228455,
+            1.0,
+            0.9998999834060669,
+            0.9998999834060669,
+            0.9998999834060669
+          ],
+          [
+            0.9998000264167786,
+            0.9998999834060669,
+            1.0,
+            0.9998999834060669,
+            0.9997000098228455
+          ],
+          [
+            0.9997000098228455,
+            0.9998999834060669,
+            0.9998999834060669,
+            1.0,
+            0.9998999834060669
+          ],
+          [
+            0.9995999932289124,
+            0.9998999834060669,
+            0.9997000098228455,
+            0.9998999834060669,
+            1.0
+          ]
+        ]
+      },
+      "metrica_3_inteligibilidad_asr": {
+        "modelo_asr": "faster-whisper (small)",
+        "wer_medio": 0.0091,
+        "wer_std": 0.0342,
+        "wer_medio_pct": 0.91,
+        "cer_medio": 0.0015,
+        "cer_std": 0.0057,
+        "cer_medio_pct": 0.15
+      },
+      "detalle_45_frases": [
+        {
+          "id_frase": 1,
+          "archivo": "Voz_Hibrida_03_frase_001.wav",
+          "texto_original": "Hola, buenos días a todos.",
+          "transcripcion_asr": "Hola, buenos días a todos.",
+          "sim_vs_donante_a": 0.7626,
+          "sim_vs_donante_b": 0.7433,
+          "sim_vs_hibrida_maestra": 0.7585,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 2,
+          "archivo": "Voz_Hibrida_03_frase_002.wav",
+          "texto_original": "Quiero tomar un vaso de agua fresca.",
+          "transcripcion_asr": "Quiero tomar un vaso de agua fresca.",
+          "sim_vs_donante_a": 0.7577,
+          "sim_vs_donante_b": 0.739,
+          "sim_vs_hibrida_maestra": 0.7541,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 3,
+          "archivo": "Voz_Hibrida_03_frase_003.wav",
+          "texto_original": "Necesito ayuda para acomodar mi silla.",
+          "transcripcion_asr": "Necesito ayuda para acomodar mi silla.",
+          "sim_vs_donante_a": 0.7607,
+          "sim_vs_donante_b": 0.7418,
+          "sim_vs_hibrida_maestra": 0.7572,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 4,
+          "archivo": "Voz_Hibrida_03_frase_004.wav",
+          "texto_original": "Me siento muy tranquilo en este lugar.",
+          "transcripcion_asr": "Me siento muy tranquilo en este lugar.",
+          "sim_vs_donante_a": 0.759,
+          "sim_vs_donante_b": 0.741,
+          "sim_vs_hibrida_maestra": 0.7564,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 5,
+          "archivo": "Voz_Hibrida_03_frase_005.wav",
+          "texto_original": "Por favor espera un momento antes de salir.",
+          "transcripcion_asr": "Por favor espera un momento antes de salir.",
+          "sim_vs_donante_a": 0.7563,
+          "sim_vs_donante_b": 0.7387,
+          "sim_vs_hibrida_maestra": 0.7543,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 6,
+          "archivo": "Voz_Hibrida_03_frase_006.wav",
+          "texto_original": "Tengo hambre y quisiera almorzar temprano.",
+          "transcripcion_asr": "Tengo hambre y quisiera almorzar temprano.",
+          "sim_vs_donante_a": 0.7612,
+          "sim_vs_donante_b": 0.7416,
+          "sim_vs_hibrida_maestra": 0.7564,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 7,
+          "archivo": "Voz_Hibrida_03_frase_007.wav",
+          "texto_original": "Muchas gracias por escucharme con paciencia.",
+          "transcripcion_asr": "Muchas gracias por escucharme con paciencia.",
+          "sim_vs_donante_a": 0.7597,
+          "sim_vs_donante_b": 0.7407,
+          "sim_vs_hibrida_maestra": 0.7556,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 8,
+          "archivo": "Voz_Hibrida_03_frase_008.wav",
+          "texto_original": "Hoy prefiero quedarme descansando en casa.",
+          "transcripcion_asr": "Hoy prefiero quedarme descansando en casa.",
+          "sim_vs_donante_a": 0.7613,
+          "sim_vs_donante_b": 0.7427,
+          "sim_vs_hibrida_maestra": 0.7578,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 9,
+          "archivo": "Voz_Hibrida_03_frase_009.wav",
+          "texto_original": "Me duele un poco la cabeza desde la mañana.",
+          "transcripcion_asr": "Me duele un poco la cabeza desde la mañana.",
+          "sim_vs_donante_a": 0.7559,
+          "sim_vs_donante_b": 0.7391,
+          "sim_vs_hibrida_maestra": 0.755,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 10,
+          "archivo": "Voz_Hibrida_03_frase_010.wav",
+          "texto_original": "Quiero llamar a mi familia por teléfono.",
+          "transcripcion_asr": "Quiero llamar a mi familia por teléfono.",
+          "sim_vs_donante_a": 0.7592,
+          "sim_vs_donante_b": 0.7412,
+          "sim_vs_hibrida_maestra": 0.7565,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 11,
+          "archivo": "Voz_Hibrida_03_frase_011.wav",
+          "texto_original": "Ya terminé todas mis actividades del día.",
+          "transcripcion_asr": "Ya terminé todas mis actividades del día.",
+          "sim_vs_donante_a": 0.7588,
+          "sim_vs_donante_b": 0.7404,
+          "sim_vs_hibrida_maestra": 0.7556,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 12,
+          "archivo": "Voz_Hibrida_03_frase_012.wav",
+          "texto_original": "Por favor baja el volumen del televisor.",
+          "transcripcion_asr": "Por favor baja el volumen del televisor.",
+          "sim_vs_donante_a": 0.7588,
+          "sim_vs_donante_b": 0.7404,
+          "sim_vs_hibrida_maestra": 0.7559,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 13,
+          "archivo": "Voz_Hibrida_03_frase_013.wav",
+          "texto_original": "¿Cómo te encuentras el día de hoy?",
+          "transcripcion_asr": "¿Cómo te encuentras el día de hoy?",
+          "sim_vs_donante_a": 0.759,
+          "sim_vs_donante_b": 0.7409,
+          "sim_vs_hibrida_maestra": 0.7563,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 14,
+          "archivo": "Voz_Hibrida_03_frase_014.wav",
+          "texto_original": "¿A qué hora vamos a salir para la consulta?",
+          "transcripcion_asr": "¿A qué hora vamos a salir para la consulta?",
+          "sim_vs_donante_a": 0.757,
+          "sim_vs_donante_b": 0.7402,
+          "sim_vs_hibrida_maestra": 0.7558,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 15,
+          "archivo": "Voz_Hibrida_03_frase_015.wav",
+          "texto_original": "¿Puedes repetirme lo que acabas de decir?",
+          "transcripcion_asr": "¿Puedes repetirme lo que acabas de decir?",
+          "sim_vs_donante_a": 0.7585,
+          "sim_vs_donante_b": 0.74,
+          "sim_vs_hibrida_maestra": 0.7551,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 16,
+          "archivo": "Voz_Hibrida_03_frase_016.wav",
+          "texto_original": "¿Dónde dejaste las llaves de la puerta principal?",
+          "transcripcion_asr": "¿Dónde dejaste las llaves de la puerta principal?",
+          "sim_vs_donante_a": 0.7571,
+          "sim_vs_donante_b": 0.7396,
+          "sim_vs_hibrida_maestra": 0.7553,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 17,
+          "archivo": "Voz_Hibrida_03_frase_017.wav",
+          "texto_original": "¿Qué tenemos preparado para cenar esta noche?",
+          "transcripcion_asr": "¿Qué tenemos preparado para cenar esta noche?",
+          "sim_vs_donante_a": 0.7578,
+          "sim_vs_donante_b": 0.7392,
+          "sim_vs_hibrida_maestra": 0.7545,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 18,
+          "archivo": "Voz_Hibrida_03_frase_018.wav",
+          "texto_original": "¿Me podrías acercar mi tableta de comunicación?",
+          "transcripcion_asr": "¿Me podrías acercar mi tableta de comunicación?",
+          "sim_vs_donante_a": 0.7589,
+          "sim_vs_donante_b": 0.7405,
+          "sim_vs_hibrida_maestra": 0.7554,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 19,
+          "archivo": "Voz_Hibrida_03_frase_019.wav",
+          "texto_original": "¿Cuándo regresan mis hermanos del colegio?",
+          "transcripcion_asr": "¿Cuándo regresan mis hermanos del colegio?",
+          "sim_vs_donante_a": 0.7606,
+          "sim_vs_donante_b": 0.7415,
+          "sim_vs_hibrida_maestra": 0.7565,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 20,
+          "archivo": "Voz_Hibrida_03_frase_020.wav",
+          "texto_original": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "transcripcion_asr": "¿Hace frío afuera o llevo un abrigo ligero?",
+          "sim_vs_donante_a": 0.7565,
+          "sim_vs_donante_b": 0.7394,
+          "sim_vs_hibrida_maestra": 0.7552,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 21,
+          "archivo": "Voz_Hibrida_03_frase_021.wav",
+          "texto_original": "¿Quién viene a visitarnos este fin de semana?",
+          "transcripcion_asr": "¿Quién viene a visitarnos este fin de semana?",
+          "sim_vs_donante_a": 0.757,
+          "sim_vs_donante_b": 0.7392,
+          "sim_vs_hibrida_maestra": 0.7548,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 22,
+          "archivo": "Voz_Hibrida_03_frase_022.wav",
+          "texto_original": "¿Podemos escuchar un poco de música suave?",
+          "transcripcion_asr": "¿Podemos escuchar un poco de músic suave?",
+          "sim_vs_donante_a": 0.7586,
+          "sim_vs_donante_b": 0.7403,
+          "sim_vs_hibrida_maestra": 0.7555,
+          "wer": 0.1429,
+          "cer": 0.025
+        },
+        {
+          "id_frase": 23,
+          "archivo": "Voz_Hibrida_03_frase_023.wav",
+          "texto_original": "¿Cuánto tiempo falta para llegar al hospital?",
+          "transcripcion_asr": "¿Cuánto tiempo falta para llega al hospital?",
+          "sim_vs_donante_a": 0.7576,
+          "sim_vs_donante_b": 0.7394,
+          "sim_vs_hibrida_maestra": 0.7548,
+          "wer": 0.1429,
+          "cer": 0.0233
+        },
+        {
+          "id_frase": 24,
+          "archivo": "Voz_Hibrida_03_frase_024.wav",
+          "texto_original": "¡Qué alegría volver a verte después de tanto tiempo!",
+          "transcripcion_asr": "¡Qué alegría volver a verte después de tanto tiempo!",
+          "sim_vs_donante_a": 0.7561,
+          "sim_vs_donante_b": 0.7394,
+          "sim_vs_hibrida_maestra": 0.7551,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 25,
+          "archivo": "Voz_Hibrida_03_frase_025.wav",
+          "texto_original": "¡Estoy muy orgulloso de todo lo que logramos juntos!",
+          "transcripcion_asr": "¡Estoy muy orgulloso de todo lo que logramos juntos!",
+          "sim_vs_donante_a": 0.756,
+          "sim_vs_donante_b": 0.7393,
+          "sim_vs_hibrida_maestra": 0.755,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 26,
+          "archivo": "Voz_Hibrida_03_frase_026.wav",
+          "texto_original": "Me da mucha ilusión participar en este proyecto.",
+          "transcripcion_asr": "Me da mucha ilusión participar en este proyecto.",
+          "sim_vs_donante_a": 0.7579,
+          "sim_vs_donante_b": 0.7403,
+          "sim_vs_hibrida_maestra": 0.7558,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 27,
+          "archivo": "Voz_Hibrida_03_frase_027.wav",
+          "texto_original": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "transcripcion_asr": "¡Qué sorpresa tan bonita me prepararon hoy!",
+          "sim_vs_donante_a": 0.7587,
+          "sim_vs_donante_b": 0.7405,
+          "sim_vs_hibrida_maestra": 0.7556,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 28,
+          "archivo": "Voz_Hibrida_03_frase_028.wav",
+          "texto_original": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "transcripcion_asr": "A veces me siento cansado, pero sigo adelante con ánimo.",
+          "sim_vs_donante_a": 0.7545,
+          "sim_vs_donante_b": 0.7377,
+          "sim_vs_hibrida_maestra": 0.7534,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 29,
+          "archivo": "Voz_Hibrida_03_frase_029.wav",
+          "texto_original": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "transcripcion_asr": "¡Te agradezco de todo corazón por tu apoyo constante!",
+          "sim_vs_donante_a": 0.7562,
+          "sim_vs_donante_b": 0.7393,
+          "sim_vs_hibrida_maestra": 0.755,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 30,
+          "archivo": "Voz_Hibrida_03_frase_030.wav",
+          "texto_original": "Me encanta cuando compartimos historias por la tarde.",
+          "transcripcion_asr": "Me encanta cuando compartimos historias por la tarde.",
+          "sim_vs_donante_a": 0.7555,
+          "sim_vs_donante_b": 0.7379,
+          "sim_vs_hibrida_maestra": 0.7536,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 31,
+          "archivo": "Voz_Hibrida_03_frase_031.wav",
+          "texto_original": "¡Qué excelente noticia acabamos de recibir!",
+          "transcripcion_asr": "¡Qué excelente noticia acabamos de recibir!",
+          "sim_vs_donante_a": 0.7607,
+          "sim_vs_donante_b": 0.7413,
+          "sim_vs_hibrida_maestra": 0.7563,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 32,
+          "archivo": "Voz_Hibrida_03_frase_032.wav",
+          "texto_original": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "transcripcion_asr": "Siento mucha paz cuando escucho el sonido de la lluvia.",
+          "sim_vs_donante_a": 0.7558,
+          "sim_vs_donante_b": 0.739,
+          "sim_vs_hibrida_maestra": 0.7547,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 33,
+          "archivo": "Voz_Hibrida_03_frase_033.wav",
+          "texto_original": "¡Felicidades por haber alcanzado tu meta con éxito!",
+          "transcripcion_asr": "¡Felicidades por haber alcanzado tu meta con éxito!",
+          "sim_vs_donante_a": 0.7573,
+          "sim_vs_donante_b": 0.7397,
+          "sim_vs_hibrida_maestra": 0.7554,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 34,
+          "archivo": "Voz_Hibrida_03_frase_034.wav",
+          "texto_original": "Me preocupa llegar tarde, salgamos lo antes posible.",
+          "transcripcion_asr": "Me preocupa llegar tarde, salgamos lo ante posible.",
+          "sim_vs_donante_a": 0.7565,
+          "sim_vs_donante_b": 0.739,
+          "sim_vs_hibrida_maestra": 0.7546,
+          "wer": 0.125,
+          "cer": 0.02
+        },
+        {
+          "id_frase": 35,
+          "archivo": "Voz_Hibrida_03_frase_035.wav",
+          "texto_original": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "transcripcion_asr": "La comunicación aumentativa y alternativa permite expresar pensamientos propios con claridad y autonomía.",
+          "sim_vs_donante_a": 0.7548,
+          "sim_vs_donante_b": 0.7403,
+          "sim_vs_hibrida_maestra": 0.7566,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 36,
+          "archivo": "Voz_Hibrida_03_frase_036.wav",
+          "texto_original": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "transcripcion_asr": "El sistema procesa la señal acústica mediante redes neuronales profundas optimizadas para baja latencia.",
+          "sim_vs_donante_a": 0.7528,
+          "sim_vs_donante_b": 0.7384,
+          "sim_vs_hibrida_maestra": 0.7548,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 37,
+          "archivo": "Voz_Hibrida_03_frase_037.wav",
+          "texto_original": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "transcripcion_asr": "Cada voz sintética conserva una identidad vocal única, natural y agradable durante conversaciones extensas.",
+          "sim_vs_donante_a": 0.7533,
+          "sim_vs_donante_b": 0.7389,
+          "sim_vs_hibrida_maestra": 0.7552,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 38,
+          "archivo": "Voz_Hibrida_03_frase_038.wav",
+          "texto_original": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "transcripcion_asr": "Los dispositivos portátiles funcionan de manera completamente local sin depender de conexiones externas a internet.",
+          "sim_vs_donante_a": 0.7521,
+          "sim_vs_donante_b": 0.738,
+          "sim_vs_hibrida_maestra": 0.7543,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 39,
+          "archivo": "Voz_Hibrida_03_frase_039.wav",
+          "texto_original": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "transcripcion_asr": "El rápido ferrocarril cruzaba las montañas verdes mientras el sol iluminaba el valle central.",
+          "sim_vs_donante_a": 0.7534,
+          "sim_vs_donante_b": 0.7388,
+          "sim_vs_hibrida_maestra": 0.7552,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 40,
+          "archivo": "Voz_Hibrida_03_frase_040.wav",
+          "texto_original": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "transcripcion_asr": "Para garantizar una excelente inteligibilidad, evaluamos cuidadosamente la pronunciación de cada fonema del español.",
+          "sim_vs_donante_a": 0.7534,
+          "sim_vs_donante_b": 0.7391,
+          "sim_vs_hibrida_maestra": 0.7552,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 41,
+          "archivo": "Voz_Hibrida_03_frase_041.wav",
+          "texto_original": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "transcripcion_asr": "Cuando trabajamos en equipo con dedicación y respeto, superamos cualquier obstáculo técnico con creatividad.",
+          "sim_vs_donante_a": 0.7529,
+          "sim_vs_donante_b": 0.7385,
+          "sim_vs_hibrida_maestra": 0.7548,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 42,
+          "archivo": "Voz_Hibrida_03_frase_042.wav",
+          "texto_original": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "transcripcion_asr": "La tecnología asistiva transforma la vida cotidiana de las personas al brindarles una voz propia y reconocible.",
+          "sim_vs_donante_a": 0.7513,
+          "sim_vs_donante_b": 0.7383,
+          "sim_vs_hibrida_maestra": 0.7552,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 43,
+          "archivo": "Voz_Hibrida_03_frase_043.wav",
+          "texto_original": "Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "transcripcion_asr": "Durante la sesión de rehabilitación practicamos ejercicios de lectura, respiración y articulación de palabras complejas.",
+          "sim_vs_donante_a": 0.7532,
+          "sim_vs_donante_b": 0.7392,
+          "sim_vs_hibrida_maestra": 0.7557,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 44,
+          "archivo": "Voz_Hibrida_03_frase_044.wav",
+          "texto_original": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "transcripcion_asr": "El modelo ligero en formato portable reduce el consumo de memoria y acelera la respuesta en procesadores estándar.",
+          "sim_vs_donante_a": 0.7502,
+          "sim_vs_donante_b": 0.7371,
+          "sim_vs_hibrida_maestra": 0.754,
+          "wer": 0.0,
+          "cer": 0.0
+        },
+        {
+          "id_frase": 45,
+          "archivo": "Voz_Hibrida_03_frase_045.wav",
+          "texto_original": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "transcripcion_asr": "Mañana presentaremos los resultados comparativos de estabilidad, similitud acústica y tasa de error de transcripción.",
+          "sim_vs_donante_a": 0.7527,
+          "sim_vs_donante_b": 0.7387,
+          "sim_vs_hibrida_maestra": 0.755,
+          "wer": 0.0,
+          "cer": 0.0
+        }
+      ]
+    }
+  }
+}

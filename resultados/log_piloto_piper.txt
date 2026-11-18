@@ -1,0 +1,31 @@
+================================================================================
+REPORTE DE PILOTO DE DESTILACIÓN PIPER / VITS A ONNX — 2026-11-18 11:18:29
+================================================================================
+Modo de ejecución         : DRY-RUN (Validación con exportación ONNX funcional)
+Voces procesadas          : Voz_Hibrida_01, Voz_Hibrida_02, Voz_Hibrida_03
+Checkpoint base español   : /home/aaron/Modulo_voces/modelos_base/piper/es_es_MX_ald_medium/es_MX_ald_medium_base_dummy.ckpt
+Script bash maestro       : /home/aaron/Modulo_voces/run_piper_finetune_3_voces.sh
+Épocas configuradas (.sh) : 1050
+CUDA disponible           : True (NVIDIA GeForce RTX 3050 Laptop GPU)
+
+--- 1. ESTADO DE DATASETS LJSPEECH (22050 Hz Mono) ---
+  * Voz_Hibrida_01: 45 audios WAV | Duración total: 133.44 s | Ruta: /home/aaron/Modulo_voces/resultados/datasets_piper/Voz_Hibrida_01
+  * Voz_Hibrida_02: 45 audios WAV | Duración total: 133.44 s | Ruta: /home/aaron/Modulo_voces/resultados/datasets_piper/Voz_Hibrida_02
+  * Voz_Hibrida_03: 45 audios WAV | Duración total: 133.44 s | Ruta: /home/aaron/Modulo_voces/resultados/datasets_piper/Voz_Hibrida_03
+
+--- 2. MÉTRICAS DE PILOTO FINE-TUNING Y EXPORTACIÓN ONNX POR VOZ ---
+Voz                | Estado                     | Épocas  | T/Época (s)  | VRAM (MB)  | ONNX (MB) 
+--------------------------------------------------------------------------------------------------
+Voz_Hibrida_01     | COMPLETADO_ONNX_EXPORTADO  | 5       | 0.1190       | 19.05      | 0.309     
+Voz_Hibrida_02     | COMPLETADO_ONNX_EXPORTADO  | 5       | 0.0043       | 19.05      | 0.309     
+Voz_Hibrida_03     | COMPLETADO_ONNX_EXPORTADO  | 5       | 0.0048       | 19.05      | 0.309     
+--------------------------------------------------------------------------------------------------
+
+--- 3. ARCHIVOS PORTABLES ONNX GENERADOS ---
+  * [Voz_Hibrida_01] Modelo : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_01/Voz_Hibrida_01.onnx
+  * [Voz_Hibrida_01] Config : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_01/Voz_Hibrida_01.onnx.json
+  * [Voz_Hibrida_02] Modelo : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_02/Voz_Hibrida_02.onnx
+  * [Voz_Hibrida_02] Config : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_02/Voz_Hibrida_02.onnx.json
+  * [Voz_Hibrida_03] Modelo : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_03/Voz_Hibrida_03.onnx
+  * [Voz_Hibrida_03] Config : /home/aaron/Modulo_voces/resultados/modelos_onnx/Voz_Hibrida_03/Voz_Hibrida_03.onnx.json
+================================================================================

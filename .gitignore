@@ -1,0 +1,22 @@
+# Byte-compiled / cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Archivos de metadatos de descargas de Windows / WSL2
+*:Zone.Identifier
+
+# Checkpoints pesados y duplicados de entrenamiento de Piper
+modelos_base/
+resultados/datasets_piper/
+*.ckpt
+*.pt
+*.pth
+
+# Carpetas originales duplicadas (ya normalizadas en datos_entrada/)
+Voz1/
+Voz2/
+voz3/

@@ -1,0 +1,4 @@
+voz,provider,latencia_5w_ms,latencia_5w_std_ms,latencia_15w_ms,latencia_15w_std_ms,latencia_30w_ms,latencia_30w_std_ms,rtf_medio,ram_rss_max_mb,ram_tracemalloc_peak_mb
+Voz_Hibrida_01,CPUExecutionProvider,1.816,0.8,3.449,0.783,6.547,1.291,0.000744,88.94,2.536
+Voz_Hibrida_02,CPUExecutionProvider,3.211,1.955,3.09,0.659,5.565,0.689,0.000961,95.36,2.034
+Voz_Hibrida_03,CPUExecutionProvider,2.297,1.26,2.967,0.285,7.325,0.968,0.000828,101.89,2.033
