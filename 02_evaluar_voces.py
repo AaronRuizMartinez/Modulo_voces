@@ -289,8 +289,9 @@ class TranscriptorInteligibilidad:
                     palabras[idx_mod] = palabra[:-1]
             return " ".join(palabras)
 
+        audio_16k, _ = librosa.load(str(wav_path), sr=16000, mono=True)
         segments, _ = self.model.transcribe(
-            str(wav_path),
+            audio_16k.astype(np.float32),
             language="es",
             beam_size=5,
             vad_filter=True,
