@@ -1,3 +1,16 @@
-OLGA- 57 años - mujer - Naranjo de Alajuela
-GLORI - 25 años - mujer -Palmares de Alajuela
-DIEGO- 27 años - hombre - Naranjo de Alajuela
+# Información Acústica y Mapeo de Donantes de las 3 Voces Híbridas
+
+1. Voz_Hibrida_01 (Femenina — f0 media: 244.9 Hz, duración muestra maestra: 14.40 s)
+   - Donante A (Voz_A_01.wav): Femenina (Claudia) — f0 media: 216.7 Hz, duración: 9.35 s
+   - Donante B (Voz_B_01.wav): Femenina (Lucía)   — f0 media: 295.5 Hz, duración: 9.83 s
+   - Tipo de mezcla: Intragénero femenina (2 donantes mujeres).
+
+2. Voz_Hibrida_02 (Masculina — f0 media: 103.6 Hz, duración muestra maestra: 13.87 s)
+   - Donante A (Voz_A_02.wav): Masculina (Alonso Contreras)    — f0 media: 109.7 Hz, duración: 27.90 s
+   - Donante B (Voz_B_02.wav): Masculina (José Rodrigo Orlich) — f0 media: 108.9 Hz, duración: 7.51 s
+   - Tipo de mezcla: Intragénero masculina (2 donantes hombres).
+
+3. Voz_Hibrida_03 (Femenina — f0 media: 186.2 Hz, duración muestra maestra: 14.63 s)
+   - Donante A (Voz_A_03.wav): Femenina (Analucía)      — f0 media: 236.2 Hz, duración: 6.03 s
+   - Donante B (Voz_B_03.wav): Femenina (Camila Chahud) — f0 media: 200.9 Hz, duración: 5.46 s
+   - Tipo de mezcla: Intragénero femenina (2 donantes mujeres, sin mezcla intergénero).
